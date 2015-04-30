@@ -19,10 +19,10 @@ class Shop(object):
 		for bike in self.inventory: 
 			print ("%s at cost %d" %(bike.name, bike.cost * self.margin ))
 			# print "{} at cost {}".format(bike.name, bike.cost)
-  def price(self,bicycle):
-      return bicycle.cost * self.margin
-    
-  def add_inventory(self, bicycle):
+	
+	def price(self,bicycle):
+		return bicycle.cost * self.margin
+	def add_inventory(self, bicycle):
 		self.inventory.append(bicycle)
 
 class Customer(object):
@@ -50,7 +50,7 @@ customers.append(Customer("Rayden", 1000))
 for customer in customers:
 	print "{0} can afford these".format(customer.name)
 	for bike in shop.inventory:
-		if shop.price(bike) <= customer.wallet
-      print bike
+		if shop.price(bike) <= customer.wallet:
+			print bike
       
 
