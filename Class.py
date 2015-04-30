@@ -51,6 +51,9 @@ for customer in customers:
 	print "{0} can afford these".format(customer.name)
 	for bike in shop.inventory:
 		if shop.price(bike) <= customer.wallet:
-			print bike
+			print bike.name
+			can_afford = bike
+		print("{0} can afford {1}").format(customer.name, afford.name)
+      
       
 
