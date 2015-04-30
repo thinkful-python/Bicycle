@@ -6,7 +6,9 @@ class Bicycle(object):
 		self.name = name
 		self.weight = weight
 		self.cost = cost
-	pass
+	def is_affordable(self,customer):
+		return self.cost <= customer.wallet
+
 
 class Shop(object):
 	""" Information about the bike shop """
@@ -22,17 +24,17 @@ class Shop(object):
 	def add_inventory(self, bicycle):
 		self.inventory.append(bicycle)
 
-class Customers(object):
+class Customer(object):
 	""" Information about the customers """
 	def __init__(self, name, wallet):
-		self.name = customer.name
-		self.wallet = money
-	pass
+		self.name = name
+		self.wallet = wallet
 
-mountain_bike = Bicycle("Mountain Bike", 35, 500)
-hybrid_bike = Bicycle("Hybrid Bike", 25, 650)
-road_bike = Bicycle("Road Bike", 25, 120)
-electric_bike = Bicycle("Electric Bike", 25, 750)
+bikes = []    
+bikes.append(("Mountain Bike", 35, 120))
+bikes.append(("Hybrid Bike", 25, 150))
+bikes.append(("Road Bike", 25, 100))
+bikes.append(("Electric Bike", 25, 350))
 
 shop = Shop("Cycle House", 1.20)
 shop.add_inventory(mountain_bike)
@@ -40,3 +42,15 @@ shop.add_inventory(hybrid_bike)
 shop.add_inventory(road_bike)
 shop.add_inventory(electric_bike)
 shop.show_inventory()
+
+customers = []
+customers.append(Customer("Jerry", 200))
+customers.append(Customer("Angela", 500))
+customers.append(Customer("Rayden", 1000))
+
+for customer in customers:
+	print "{0} can afford these".format(customer.name)
+	for bike in shop.inventory:
+		if bike.is_affordable(customer): 
+			print bike.name
+
