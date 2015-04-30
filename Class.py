@@ -53,9 +53,8 @@ for customer in customers:
 		if shop.price(bike) <= customer.wallet:
 			print bike.name
 			can_afford = bike
-	print("{0} can afford {1} at {2}").format(customer.name, can_afford.name, shop.price)
+	print("{0} can afford {1} at {2}".format(customer.name, can_afford.name, shop.price(can_afford)))
   
-customer.wallet - (shop.price(can_afford))
-	print result      
-      
+	customer.wallet -= (shop.price(can_afford))
+	print ("After bike purchase {0} has {1} leftover".format(customer.name, customer.wallet)) 
 
