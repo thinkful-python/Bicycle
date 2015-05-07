@@ -14,23 +14,26 @@ class Shop(object):
 	def __init__(self, name, margin):
 		self.name = name
 		self.margin = margin
-		self.inventory = []
+		self.inventory = dict()
 	def show_inventory(self):
-		for bike in self.inventory: 
-			print ("%s at cost %d" %(bike.name, bike.cost * self.margin ))
+		for bike, count in self.inventory.iteritems(): 
+			print ("%s at cost %d with %d" %(bike.name, bike.cost * self.margin, count))
 			# print "{} at cost {}".format(bike.name, bike.cost)
 	
 	def price(self,bicycle):
 		return bicycle.cost * self.margin
-	def add_inventory(self, bicycle):
-		self.inventory.append(bicycle)
+	def add_inventory(self, bicycle, count):
+		self.inventory[bicycle] = count
 
 class Customer(object):
 	""" Information about the customers """
 	def __init__(self, name, wallet):
 		self.name = name
 		self.wallet = wallet
-
+  	def purchase(self, bike):
+    		self.bike = (bike.)
+    		count = count - 1
+    
 bikes = []    
 bikes.append(Bicycle("Mountain Bike", 35, 120))
 bikes.append(Bicycle("Hybrid Bike", 25, 150))
@@ -39,8 +42,9 @@ bikes.append(Bicycle("Electric Bike", 25, 350))
 
 
 shop = Shop("Cycle House", 1.20)
-shop.inventory = bikes
-shop.show_inventory()
+for bike in bikes: 
+  shop.add_inventory(bike, 5)
+  shop.show_inventory()
 
 customers = []
 customers.append(Customer("Jerry", 200))
@@ -53,8 +57,9 @@ for customer in customers:
 		if shop.price(bike) <= customer.wallet:
 			print bike.name
 			can_afford = bike
+			customer.purchase(bike)
 	print("{0} can afford {1} at {2}".format(customer.name, can_afford.name, shop.price(can_afford)))
-  
-	customer.wallet -= (shop.price(can_afford))
+#	customer.purchase(bike) 
+				#customer.wallet -= (shop.price(can_afford))
 	print ("After bike purchase {0} has {1} leftover".format(customer.name, customer.wallet)) 
 
