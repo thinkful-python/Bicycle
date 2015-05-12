@@ -27,7 +27,7 @@ class Customer(object):
         def __init__(self, name, wallet):
                 self.name = name
                 self.wallet = wallet
-        def purchase(self, bike, count):
-                self.bike = (bike)
-                self.purchase = self.inventory[bicycle]-1
-                #self.purchase = (count)-1
+        def purchase(self, bicycle, shop):
+                self.bicycle = (bicycle)
+                self.purchase = shop.inventory[bicycle]-1
+                self.purchase = self.wallet - shop.price
