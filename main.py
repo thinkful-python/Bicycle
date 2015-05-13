@@ -7,9 +7,10 @@ bikes.append(Bicycle("Road Bike", 25, 100))
 bikes.append(Bicycle("Electric Bike", 25, 350))
 
 
-shop = Shop("Cycle House", 1.20)
+shop = Shop("Cycle House", 1.20, 50000)
 for bike in bikes:
   shop.add_inventory(bike, 5)
+  shop.register(-bike.price*5)
 shop.show_inventory()
 
 customers = []
