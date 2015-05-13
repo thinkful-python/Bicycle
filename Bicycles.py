@@ -1,20 +1,18 @@
 class Bicycle(object):
-		self.bicycle = (bicycle)
-		self.purchase = shop.inventory[bicycle]-1
-		self.purchase = self.wallet - shop.price
-	""" Information and specifications about a bike """
-	def __init__(self, name, weight, cost):
-		self.name = name
-		self.weight = weight
-		self.cost = cost
-	def is_affordable(self,customer):
-		return self.cost <= customer.wallet
-	def __init__(self, name, weight, cost):
-		self.name = name
-		self.weight = weight
-		self.cost = cost
-	def is_affordable(self,customer):
-		return self.cost <= customer.wallet
+			#self.bicycle = (bicycle)
+			#self.purchase = shop.inventory[bicycle]-1
+			#self.purchase = self.wallet - shop.price
+			""" Information and specifications about a bike """
+			def __init__(self, name, weight, cost):
+				self.name = name
+				self.weight = weight
+				self.cost = cost
+			def is_affordable(self,customer):
+				return self.cost <= customer.wallet
+			def __init__(self, name, weight, cost):
+				self.name = name
+				self.weight = weight
+				self.cost = cost
 
 class Shop(object):
 	""" Information about the bike shop """
@@ -22,7 +20,7 @@ class Shop(object):
 		self.name = name
 		self.margin = margin
 		self.inventory = dict()
-				self.balance = balance
+		self.balance = balance
 	def show_inventory(self):
 		for bike, count in self.inventory.iteritems(): 
 						print ("Cycle House now has {0} {1}s left at {2} and a balance of {3}".format(count, bike.name, bike.cost * self.margin, self.balance))
@@ -32,10 +30,10 @@ class Shop(object):
 		return bicycle.cost * self.margin
 	def add_inventory(self, bicycle, count):
 		self.inventory[bicycle] = count
-		def remove_inventory(self, bicycle, count = 1):
+	def remove_inventory(self, bicycle, count = 1):
 				self.inventory[bicycle] = self.inventory[bicycle] - count
-		def register(self, amount):
-			self.balance = self.balance + amount
+	def register(self, amount):
+				self.balance = self.balance + amount
 
 class Customer(object):
 	""" Information about the customers """
