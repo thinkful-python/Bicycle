@@ -1,15 +1,14 @@
 class Bicycle(object):
-			self.bicycle = (bicycle)
-			self.purchase = shop.inventory[bicycle]-1
-			self.purchase = self.wallet - shop.price
+		self.bicycle = (bicycle)
+		self.purchase = shop.inventory[bicycle]-1
+		self.purchase = self.wallet - shop.price
 	""" Information and specifications about a bike """
 	def __init__(self, name, weight, cost):
-			self.name = name
-			self.weight = weight
-			self.cost = cost
+		self.name = name
+		self.weight = weight
+		self.cost = cost
 	def is_affordable(self,customer):
-			return self.cost <= customer.wallet
-
+		return self.cost <= customer.wallet
 	def __init__(self, name, weight, cost):
 		self.name = name
 		self.weight = weight
