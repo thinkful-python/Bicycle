@@ -6,6 +6,15 @@ bikes.append(Bicycle("Hybrid Bike", 25, 150))
 bikes.append(Bicycle("Road Bike", 25, 100))
 bikes.append(Bicycle("Electric Bike", 25, 350))
 
+wheels = []
+wheels.append(Wheels("A1900", 1, 75))
+wheels.append(Wheels("A500", 3, 60))
+wheels.append(Wheels("A100", 5, 45))
+
+frames = [] 
+frames.append(Frames(carbon, 100))
+frames.append(Frames(aluminum, 75))
+frames.append(Frames(steel, 50))
 
 shop = Shop("Cycle House", 1.20, 50000)
 for bike in bikes:
