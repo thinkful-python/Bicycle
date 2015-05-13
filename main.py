@@ -1,4 +1,4 @@
-from bicycles import Bicycle, Shop, Customer
+from Bicycles import Bicycle, Shop, Customer
 
 bikes = []
 bikes.append(Bicycle("Mountain Bike", 35, 120))
