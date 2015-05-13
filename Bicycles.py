@@ -13,7 +13,9 @@ class Bicycle(object):
 				self.name = name
 				self.weight = weight
 				self.cost = cost
-
+		def customize(self, wheels.model, frame.material):
+				#add logic here so that bike has two of the same wheels and one frame
+				
 class Shop(object):
 	""" Information about the bike shop """
 	def __init__(self, name, margin, balance):
@@ -44,3 +46,17 @@ class Customer(object):
 			shop.remove_inventory(bicycle)
 			self.wallet = self.wallet - shop.price(bicycle)
 			shop.register(shop.price(bicycle))
+			
+class Wheels(object):
+	"""Customized Wheels"""
+	def __init__(self, model, weight, cost):
+		self.model = model
+		self.weight = weight
+		self.cost = cost
+		
+class Frames(object):
+	"""Customized Frames"""
+	def __init__(self, material, cost):
+		# Need to add logic here to choose between aluminum, carbon or steel
+		# self.material = material
+		self.cost = cost
