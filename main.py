@@ -1,4 +1,4 @@
-from Bicycles import Bicycle, Shop, Customer
+from Bicycles import Bicycle, Shop, Customer, Wheels, Frames
 
 bikes = []
 bikes.append(Bicycle("Mountain Bike", 35, 120))
@@ -12,14 +12,13 @@ wheels.append(Wheels("A500", 3, 60))
 wheels.append(Wheels("A100", 5, 45))
 
 frames = [] 
-frames.append(Frames(carbon, 100))
-frames.append(Frames(aluminum, 75))
-frames.append(Frames(steel, 50))
+frames.append(Frames("carbon", 100, 7))
+frames.append(Frames("aluminum", 75, 10))
+frames.append(Frames("steel", 50, 12))
 
 shop = Shop("Cycle House", 1.20, 50000)
 for bike in bikes:
   shop.add_inventory(bike, 5)
-#  shop.register(-bike.price*5)
 
 customers = []
 customers.append(Customer("Jerry", 200))

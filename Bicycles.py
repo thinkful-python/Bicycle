@@ -1,7 +1,4 @@
 class Bicycle(object):
-			#self.bicycle = (bicycle)
-			#self.purchase = shop.inventory[bicycle]-1
-			#self.purchase = self.wallet - shop.price
 			""" Information and specifications about a bike """
 			def __init__(self, name, weight, cost):
 				self.name = name
@@ -13,7 +10,8 @@ class Bicycle(object):
 				self.name = name
 				self.weight = weight
 				self.cost = cost
-		def customize(self, wheels.model, frame.material):
+			def customize(self, wheels, frame):
+				self.cost = wheels.cost * 2 + frame.cost
 				#add logic here so that bike has two of the same wheels and one frame
 				
 class Shop(object):
@@ -56,7 +54,7 @@ class Wheels(object):
 		
 class Frames(object):
 	"""Customized Frames"""
-	def __init__(self, material, cost):
-		# Need to add logic here to choose between aluminum, carbon or steel
-		# self.material = material
+	def __init__(self, material, cost, weight):
+		self.material = material
 		self.cost = cost
+		self.weight = weight
