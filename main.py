@@ -12,9 +12,11 @@ wheels.append(Wheels("A500", 3, 60))
 wheels.append(Wheels("A100", 5, 45))
 
 frames = [] 
-frames.append(Frames("carbon", 100, 7))
-frames.append(Frames("aluminum", 75, 10))
-frames.append(Frames("steel", 50, 12))
+frames.append(Frames("carbon", 7, 100))
+frames.append(Frames("aluminum", 10, 75))
+frames.append(Frames("steel", 12, 50))
+
+bikes[1].customize(wheels[0], frames[0])
 
 shop = Shop("Cycle House", 1.20, 50000)
 for bike in bikes:

@@ -12,7 +12,7 @@ class Bicycle(object):
 				self.cost = cost
 			def customize(self, wheels, frame):
 				self.cost = wheels.cost * 2 + frame.cost
-				#add logic here so that bike has two of the same wheels and one frame
+				print ("Customizing {} for customer with {} wheels and a {} frame").format(self.name, wheels.model, frame.material)
 				
 class Shop(object):
 	""" Information about the bike shop """
@@ -54,7 +54,7 @@ class Wheels(object):
 		
 class Frames(object):
 	"""Customized Frames"""
-	def __init__(self, material, cost, weight):
+	def __init__(self, material, weight, cost):
 		self.material = material
 		self.cost = cost
 		self.weight = weight
